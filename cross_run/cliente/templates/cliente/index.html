@@ -1,0 +1,9 @@
+{% if ultimos %}
+    <ul>
+    {% for cli in ultimos %}
+        <li><a href="/cliente/{{ nombre.id }}/">{{ nombre.nombre_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Sin clientes disponibles.</p>
+{% endif %}
