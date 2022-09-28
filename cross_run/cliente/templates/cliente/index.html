@@ -1,9 +1,23 @@
-{% if ultimos %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if ultimos_usuarios %}
     <ul>
-    {% for cli in ultimos %}
-        <li><a href="/cliente/{{ nombre.id }}/">{{ nombre.nombre_text }}</a></li>
-    {% endfor %}
+        {% for cli in ultimos_usuarios %}
+        <li><a href="{% url 'cliente:detail' cli.id %}">{{ cli.nombre }}, {{ cli.apellido }}</a></li>
+        {% endfor %}
     </ul>
-{% else %}
-    <p>Sin clientes disponibles.</p>
-{% endif %}
+    {% else %}
+    <p>Sin usuarios disponibles.</p>
+    {% endif %}
+</body>
+
+</html>
