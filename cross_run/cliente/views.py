@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from tracemalloc import get_object_traceback
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
@@ -43,3 +44,11 @@ class ResultadoView(generic.DetailView):
     response = "Estas viendo la funcion de resultado %s"
     return HttpResponse(response % id)
 '''
+=======
+from django.shortcuts import render
+from django.http import HttpResponse
+
+
+def index(request):
+    return HttpResponse("Iniciando mi primer clase del proyecto .-.")
+>>>>>>> parent of 0a3799a (Modelos de clases para base de datos)
