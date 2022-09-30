@@ -1,5 +1,5 @@
 """
-ASGI config for cross_run project.
+ASGI cross_run for cross_run project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

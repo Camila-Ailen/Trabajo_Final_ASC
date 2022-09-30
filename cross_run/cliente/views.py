@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 from tracemalloc import get_object_traceback
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
+from django.http import HttpResponse
 from django.template import loader
 from django.http import Http404
 from django.urls import reverse
@@ -16,14 +16,14 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Cliente.objects.all()
 
-'''
+def index(request):
     ultimos_usuarios = Cliente.objects.all
     template = loader.get_template('cliente/index.html')
     context = {
         'ultimos_usuarios': ultimos_usuarios
     }
     return render(request, 'cliente/index.html', context)
-'''
+
 
 
 class DetailView(generic.DetailView):
@@ -43,12 +43,11 @@ class ResultadoView(generic.DetailView):
 ''''
     response = "Estas viendo la funcion de resultado %s"
     return HttpResponse(response % id)
-'''
-=======
+
 from django.shortcuts import render
 from django.http import HttpResponse
 
 
 def index(request):
     return HttpResponse("Iniciando mi primer clase del proyecto .-.")
->>>>>>> parent of 0a3799a (Modelos de clases para base de datos)
+'''
